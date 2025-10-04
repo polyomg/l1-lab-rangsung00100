@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Product Form</title>
+</head>
+<body>
+    <h1>Product Form</h1>
+    <form th:action="@{/product/save}" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input id="name" name="name" th:value="${product.name}"
+				placeholder="Enter name">
+        </div>
+        <div>
+            <label for="price">Price:</label>
+            <input id="price" name="price" type="number"
+				th:value="${product.price}" placeholder="Enter price">
+        </div>
+        <button type="submit">Save</button>
+    </form>
+    <ul>
+        <li th:text="${product.name}">?name</li>
+        <li
+			th:text="${product.price}">?price</li>
+    </ul>
+</body>
+</html>

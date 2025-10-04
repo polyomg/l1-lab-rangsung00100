@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/param/save/{number}(number=2021)}"  method="post">
+	 <input name="y" value="2031">
+	 <button>Save</button>
+	</form>
+	<ul>
+	 <li th:text="${x == null ? '?x': x}"></li>
+	 <li th:text="${y == null ? '?y': y}"></li>
+	</ul>
+</body>
+</html>

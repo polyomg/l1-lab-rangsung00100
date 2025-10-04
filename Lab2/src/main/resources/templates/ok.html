@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/ok}" method="post">
+		<button>OK 1</button>
+		<button th:formaction="@{/okk}" formmethod="get">OK 2</button>
+		<button th:formaction="@{/ctrl/ok?x}">OK 3</button>
+	</form>
+	Kết quả:
+	<span th:text="${name == null ? '?': name}"></span>
+
+</body>
+</html>
