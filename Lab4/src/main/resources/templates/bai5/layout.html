@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html th:fragment="view(title, content)">
+<head>
+<title th:replace="${title}">TITLE</title>
+</head>
+<body>
+	<header>
+		<h1 th:text="#{header.name}"></h1>
+	</header>
+	<nav th:replace="~{bai5/menu}">MENU</nav>
+	<article th:replace="${content}">CONTENT</article>
+	<th:block th:utext="#{footer.copy}">
+	</th:block>
+</body>
+</html>

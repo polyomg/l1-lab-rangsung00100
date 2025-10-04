@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html th:fragment="view(title, content)">
+<head>
+<title th:replace="${title}">TITLE</title>
+</head>
+<body>
+	<header>
+		<h1>Online Shopping</h1>
+	</header>
+	<nav th:replace="~{bai4/menu}">MENU</nav>
+	<article th:replace="${content}">CONTENT</article>
+	<footer>
+		<hr>
+		&copy; 2024 by FPT Polytechnic. All rights reserved.
+	</footer>
+</body>
+</html>
