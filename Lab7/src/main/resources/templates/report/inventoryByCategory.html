@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Category Management</title>
+</head>
+<body>
+	<h3>Tồn kho theo loại</h3>
+	<table border="1" style="width: 100%">
+		<tr>
+			<th>Loại hàng</th>
+			<th>Tổng giá</th>
+			<th>Số sản phẩm</th>
+		</tr>
+		<th:block th:each="item: ${items}">
+			<tr>
+				<td th:text="${item.name}"></td>
+				<td th:text="${item.sum}"></td>
+				<td th:text="${item.count}"></td>
+			</tr>
+		</th:block>
+	</table>
+</body>
+</html>
