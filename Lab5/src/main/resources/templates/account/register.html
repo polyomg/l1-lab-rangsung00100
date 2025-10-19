@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h2>Register</h2>
+    <form action="/account/register" method="post" enctype="multipart/form-data">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        
+        <label for="profileImage">Profile Image:</label>
+        <input type="file" id="profileImage" name="profileImage" accept="image/*" required>
+        <br>
+        <th:block th:text="${messSucces}">
+		</th:block>	
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

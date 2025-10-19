@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/account/login2" method="post">
+		<div>
+		<label id="label-1">Username:</label>
+		<input name="username" required> 
+		<label id="label-1">Password:</label>
+		<input name="password" required> 
+		</div>
+		<div><button>Login</button></div>
+	</form>
+	<th:block th:if="${mess != null}" th:text="${mess}">
+	</th:block>
+</body>
+</html>

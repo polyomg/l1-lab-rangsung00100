@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/account/login" method="post">
+		<div>
+		<label id="label-1">Username:</label>
+		<input name="username" th:value="${user}" required> 
+		<label id="label-1">Password:</label>
+		<input name="password" th:value="${password}" required> 
+		</div>
+		<label id="label-1">ghi nhớ tôi:</label>
+		<input type="checkbox" name="remember" value="true">
+		<div><button>Login</button></div>
+	</form>
+	<th:block th:if=${session.username!=null}>
+		Đăng nhập thành công
+	</th:block>
+	<th:block th:if="${mess != null}" th:text="${mess}">
+	</th:block>
+</body>
+</html>
